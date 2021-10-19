@@ -1,0 +1,42 @@
+﻿<Window x:Class="NorthernLightsHospital.View.frmAdmission"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NorthernLightsHospital.View"
+        mc:Ignorable="d"
+        Title="frmAdmission" Height="491" Width="711" Background="AliceBlue" ResizeMode="NoResize">
+    <Grid Margin="10,0,10,10">
+        <Label Content="Selecionner médecin:" HorizontalAlignment="Left" Margin="20,87,0,0" VerticalAlignment="Top"/>
+
+        <Grid HorizontalAlignment="Left" Height="260" Margin="402,176,0,0" VerticalAlignment="Top" Width="268">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="77*"/>
+                <ColumnDefinition Width="192*"/>
+            </Grid.ColumnDefinitions>
+            <ComboBox x:Name="cbLit" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="247" SelectionChanged="cbLit_SelectionChanged"/>
+        </Grid>
+        <Label Content="Selecionner lit:" HorizontalAlignment="Left" Margin="402,145,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbDepartement" HorizontalAlignment="Left" Margin="402,118,0,0" VerticalAlignment="Top" Width="248" SelectionChanged="cbDepartement_SelectionChanged"/>
+        <Label Content="Departement:" HorizontalAlignment="Left" Margin="401,87,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbMedecin" HorizontalAlignment="Left" Margin="20,118,0,0" VerticalAlignment="Top" Width="286" SelectionChanged="cbMedecin_SelectionChanged" />
+        <Label Content="Selecionner Patient:" HorizontalAlignment="Left" Margin="20,151,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbPatient" HorizontalAlignment="Left" Margin="20,182,0,0" VerticalAlignment="Top" Width="286" SelectionChanged="cbPatient_SelectionChanged" />
+        <Label Content="Nom patient:" HorizontalAlignment="Left" Margin="32,222,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbNomPt" Content="---------------------------------------------" HorizontalAlignment="Left" Margin="125,222,0,0" VerticalAlignment="Top" Width="220"/>
+        <Label Content="Date naissance:" HorizontalAlignment="Left" Margin="20,248,0,0" VerticalAlignment="Top"/>
+        <Label Content="Assurance privé:" HorizontalAlignment="Left" Margin="15,300,0,0" VerticalAlignment="Top"/>
+        <Label Content="Telephone:" HorizontalAlignment="Left" Margin="44,274,0,0" VerticalAlignment="Top"/>
+        <Label Content="Adresse:" HorizontalAlignment="Left" Margin="56,326,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbDtNaissancePt" Content="---------------------------------------------" HorizontalAlignment="Left" Margin="125,248,0,0" VerticalAlignment="Top" Width="220"/>
+        <Label x:Name="lbTelephonePt" Content="---------------------------------------------" HorizontalAlignment="Left" Margin="125,274,0,0" VerticalAlignment="Top" Width="220"/>
+        <Label x:Name="lbAssurancePrivePt" Content="---------------------------------------------" HorizontalAlignment="Left" Margin="125,300,0,0" VerticalAlignment="Top" Width="220"/>
+        <Label x:Name="lbAdressePt" Content="---------------------------------------------" HorizontalAlignment="Left" Margin="125,326,0,0" VerticalAlignment="Top" Width="220"/>
+        <Button Content="Enregistrer" HorizontalAlignment="Left" Margin="218,375,0,0" VerticalAlignment="Top" Width="127" Height="30" Click="ButtonEnregistrer_Click"/>
+        <Button Content="Annuler" HorizontalAlignment="Left" Margin="32,375,0,0" VerticalAlignment="Top" Width="127" Height="30"/>
+
+
+
+
+    </Grid>
+</Window>

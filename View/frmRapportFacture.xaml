@@ -1,0 +1,26 @@
+﻿<Window x:Class="NorthernLightsHospital.View.frmRapportFacture"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NorthernLightsHospital.View"
+        mc:Ignorable="d"
+        Title="frmRapportFacture" Height="362" Width="800" Background="AliceBlue">
+    <Grid>
+        <Label Content="Admission ID:" HorizontalAlignment="Left" Margin="65,61,0,0" VerticalAlignment="Top"/>
+        <Label Content="Rapport de facturation" HorizontalAlignment="Left" Margin="309,32,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txID" HorizontalAlignment="Left" Margin="152,65,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="63"/>
+        <Label Content="Numero Patient:" HorizontalAlignment="Left" Margin="51,108,0,0" VerticalAlignment="Top"/>
+        <Label Content="Prenom:" HorizontalAlignment="Left" Margin="93,170,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nom:" HorizontalAlignment="Left" Margin="109,139,0,0" VerticalAlignment="Top"/>
+        <Label Content="Total séjour:" HorizontalAlignment="Left" Margin="74,201,0,0" VerticalAlignment="Top"/>
+        <Button Content="Rechercher" HorizontalAlignment="Left" Margin="232,62,0,0" VerticalAlignment="Top" Width="73" Height="23" Click="Button_Click"/>
+        <Label x:Name="lbNumeroPt" Content="---------------------" HorizontalAlignment="Left" Margin="152,108,0,0" VerticalAlignment="Top" Width="95"/>
+        <Label x:Name="lbNomPt" Content="---------------------" HorizontalAlignment="Left" Margin="152,139,0,0" VerticalAlignment="Top" Width="95"/>
+        <Label x:Name="lbPrenomPt" Content="---------------------" HorizontalAlignment="Left" Margin="152,170,0,0" VerticalAlignment="Top" Width="95"/>
+        <Label x:Name="lbTotalSejour" Content="---------------------" HorizontalAlignment="Left" Margin="152,201,0,0" VerticalAlignment="Top" Width="95"/>
+        <Label Content="Commodités" HorizontalAlignment="Left" Margin="530,77,0,0" VerticalAlignment="Top"/>
+        <DataGrid x:Name="dgCommodite" Margin="410,108,73,35" ItemsSource="{Binding}"/>
+
+    </Grid>
+</Window>

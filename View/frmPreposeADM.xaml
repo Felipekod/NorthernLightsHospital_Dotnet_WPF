@@ -1,0 +1,139 @@
+﻿<Window x:Class="NorthernLightsHospital.View.frmPreposeADM"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NorthernLightsHospital.View"
+        mc:Ignorable="d"
+        Title="Bienvenue" Height="490" Width="820" ResizeMode="NoResize">
+    <Grid Background="#FFFBFBFB">
+
+        <DockPanel Margin="0,0,0,424">
+
+            <Menu DockPanel.Dock="Top" Height="20">
+                <MenuItem Header="_Patients" Height="24" >
+                    <MenuItem Header="_Nouveau" Click="MenuItemNouveauPt_Click"/>
+
+                    
+                </MenuItem>
+
+                <MenuItem Header="_Admissions" Height="24" >
+                    <MenuItem Header="_Nouvelle" Click="MenuItemNouvelleAd_Click"/>
+                    <MenuItem Header="_Congé Patient" Click="MenuItemCongePatient_Click"/>
+                    
+                </MenuItem>
+
+                <MenuItem Header="_Commodités" Height="24" >
+                    <MenuItem Header="_Ajouter une location" Click="MenuItemAjouterCommodite_Click"/>
+                    <MenuItem Header="_Fermer une location" Click="MenuItemFermerCommodite_Click"/>
+
+                </MenuItem>
+
+                <MenuItem Header="_Employé" Height="24" >
+                    <MenuItem Header="_Ajouter Employé" Click="MenuItemAjouterEmploye_Click"/>
+
+                </MenuItem>
+
+                <MenuItem Header="Administrateur" Height="24" >
+                    <MenuItem Header="_Rapport" Click="MenuItemRapport_Click"/>
+
+                </MenuItem>
+
+            </Menu>
+
+        </DockPanel>
+        <Grid Margin="0,26,400,0">
+            <Label Content="Lits libres:" HorizontalAlignment="Left" Margin="38,10,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label Content="Lits occupées:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label x:Name="litLibre" Content="0" HorizontalAlignment="Left" Margin="123,10,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label x:Name="litOccupee" Content="0" HorizontalAlignment="Left" Margin="123,41,0,0" VerticalAlignment="Top"/>
+            <DataGrid x:Name="dgListePatients" Margin="0,122,20,0" ItemsSource="{Binding}"/>
+            <Button Content="Charger liste de patients" HorizontalAlignment="Left" Margin="123,89,0,0" VerticalAlignment="Top" Click="ButtonListePt_Click"/>
+
+
+        </Grid>
+
+
+
+
+        <Grid Margin="400,26,0,0">
+            <Grid Margin="0,0,200,212">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFEBFEFF" Offset="1"/>
+                        <GradientStop Color="White" Offset="0"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Label Content="Chirurgie" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+                <Label Content="Privé:" HorizontalAlignment="Left" Margin="35,44,0,0" VerticalAlignment="Top"/>
+                <Label Content="Semi-privé:" HorizontalAlignment="Left" Margin="4,70,0,0" VerticalAlignment="Top"/>
+                <Label Content="Standard:" HorizontalAlignment="Left" Margin="13,96,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="lbChirurgieP" Content="-----------------" HorizontalAlignment="Left" Margin="78,44,0,0" VerticalAlignment="Top" Width="89"/>
+                <Label x:Name="lbChirurgieSP" Content="-----------------" HorizontalAlignment="Left" Margin="78,70,0,0" VerticalAlignment="Top" Width="89"/>
+                <Label x:Name="lbChirurgieST" Content="-----------------" HorizontalAlignment="Left" Margin="78,96,0,0" VerticalAlignment="Top" Width="89"/>
+
+            </Grid>
+
+            <Grid Margin="200,0,0,212">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFEBFEFF" Offset="1"/>
+                        <GradientStop Color="White" Offset="0"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Label Content="Medicine generale" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+                <Label Content="Privé:" HorizontalAlignment="Left" Margin="35,44,0,0" VerticalAlignment="Top"/>
+                <Label Content="Semi-privé:" HorizontalAlignment="Left" Margin="4,70,0,0" VerticalAlignment="Top"/>
+                <Label Content="Standard:" HorizontalAlignment="Left" Margin="13,96,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="lbMedecineP" Content="--------------" HorizontalAlignment="Left" Margin="87,44,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="lbMedecineSP" Content="--------------" HorizontalAlignment="Left" Margin="87,70,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="lbMedecineST" Content="--------------" HorizontalAlignment="Left" Margin="87,96,0,0" VerticalAlignment="Top"/>
+
+            </Grid>
+
+            <Grid Margin="200,206,0,0">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFEBFEFF"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Label Content="Cardio-respiratoire" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+                <Label Content="Privé:" HorizontalAlignment="Left" Margin="35,44,0,0" VerticalAlignment="Top"/>
+                <Label Content="Semi-privé:" HorizontalAlignment="Left" Margin="4,70,0,0" VerticalAlignment="Top"/>
+                <Label Content="Standard:" HorizontalAlignment="Left" Margin="13,96,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="lbCRP" Content="---------------" HorizontalAlignment="Left" Margin="83,44,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="lbCRSP" Content="---------------" HorizontalAlignment="Left" Margin="83,65,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="lbCRST" Content="---------------" HorizontalAlignment="Left" Margin="83,96,0,0" VerticalAlignment="Top"/>
+
+            </Grid>
+
+            <Grid Margin="0,206,200,0">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFEBFEFF"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Label Content="Pédiatrie" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+                <Label Content="Privé:" HorizontalAlignment="Left" Margin="35,44,0,0" VerticalAlignment="Top"/>
+                <Label Content="Semi-privé:" HorizontalAlignment="Left" Margin="4,70,0,0" VerticalAlignment="Top"/>
+                <Label Content="Standard:" HorizontalAlignment="Left" Margin="13,96,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="lbPediatrieP" Content="----------------" HorizontalAlignment="Left" Margin="82,44,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="lbPediatrieSP" Content="----------------" HorizontalAlignment="Left" Margin="82,70,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="lbPediatrieST" Content="----------------" HorizontalAlignment="Left" Margin="82,96,0,0" VerticalAlignment="Top"/>
+
+            </Grid>
+
+
+
+
+
+        </Grid>
+
+
+
+
+    </Grid>
+
+</Window>

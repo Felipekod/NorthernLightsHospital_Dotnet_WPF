@@ -1,0 +1,18 @@
+﻿<Window x:Class="NorthernLightsHospital.View.frmCongePatient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NorthernLightsHospital.View"
+        mc:Ignorable="d"
+        Title="frmCongePatient" Height="284" Width="800" Background="AliceBlue">
+    <Grid>
+        <Label Content="Medecin en charge: " HorizontalAlignment="Left" Margin="180,51,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbMedecin" HorizontalAlignment="Left" Margin="302,53,0,0" VerticalAlignment="Top" Width="297" SelectionChanged="cbMedecin_SelectionChanged"/>
+        <Label Content="Selectionner le patient à recevoir le congé:" HorizontalAlignment="Left" Margin="63,101,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbPatient" HorizontalAlignment="Left" Margin="302,103,0,0" VerticalAlignment="Top" Width="297"/>
+        <Button Content="Enregistrer" HorizontalAlignment="Left" Margin="520,165,0,0" VerticalAlignment="Top" Width="79" Height="30" Click="ButtonEnregistrer_Click"/>
+        <Button Content="Annuler" HorizontalAlignment="Left" Margin="218,165,0,0" VerticalAlignment="Top" Width="79" Height="30"/>
+
+    </Grid>
+</Window>
